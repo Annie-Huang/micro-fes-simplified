@@ -26,5 +26,5 @@ Next steps:
 PS C:\react\micro-fes-simplified> cd .\growlers\
 PS C:\react\micro-fes-simplified\growlers> npm install
 PS C:\react\micro-fes-simplified\growlers> npm i @chakra-ui/react @emotion/react @emotion/styled framer-motion
-
+PS C:\react\micro-fes-simplified\growlers> npm install valtio
 
