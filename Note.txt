@@ -7,4 +7,24 @@ https://dev.to/jherr/micro-fes-simplified-5ac6
 https://github.com/Annie-Huang/micro-fes-simplified
 --------------------------------------------------------------
 
+PS C:\react\micro-fes-simplified> npx create-mf-app
+? Pick the name of your app: growlers
+? Project Type: Application
+? Port number: 8080
+? Framework: react
+? Language: typescript
+? CSS: CSS
+? Packer: Webpack
+Your 'growlers' project is ready to go.
+
+Next steps:
+
+▶️ cd growlers
+▶️ npm install
+▶️ npm start
+
+PS C:\react\micro-fes-simplified> cd .\growlers\
+PS C:\react\micro-fes-simplified\growlers> npm install
+
+
 
