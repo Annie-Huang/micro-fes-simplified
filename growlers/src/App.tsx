@@ -1,5 +1,5 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React, { FC } from 'react';
+import ReactDOM from 'react-dom/client';
 import { SimpleGrid, Text, ChakraProvider } from '@chakra-ui/react';
 
 import Search from './components/Search';
@@ -8,7 +8,7 @@ import Cart from './components/Cart';
 
 import './index.css';
 
-const H3 = ({ children }) => (
+const H3: FC<React.PropsWithChildren> = ({ children }) => (
   <Text fontSize='xl' mb={3} fontWeight='bold' textAlign='center'>
     {children}
   </Text>
