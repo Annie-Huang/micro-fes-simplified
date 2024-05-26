@@ -2,6 +2,10 @@ import React, { FC } from 'react';
 import ReactDOM from 'react-dom/client';
 import { SimpleGrid, Text, ChakraProvider } from '@chakra-ui/react';
 
+// Load the store.
+import { load } from './store';
+load('hv-taplist');
+
 import Search from './components/Search';
 import Taps from './components/Taps';
 import Cart from './components/Cart';
