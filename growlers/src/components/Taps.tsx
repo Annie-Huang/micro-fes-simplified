@@ -9,8 +9,6 @@ import { MFE_BORDER } from '../constants';
 const Taps = () => {
   const { filteredTaps } = useSnapshot(store);
 
-  console.log('filteredTaps=', filteredTaps);
-
   return (
     <Box border={MFE_BORDER}>
       {filteredTaps.map((beverage) => (

@@ -1,20 +1,24 @@
-import React from "react";
-import { Box, Button, Text } from "@chakra-ui/react";
+import React from 'react';
+import { Box, Button, Text } from '@chakra-ui/react';
+import { useSnapshot } from 'valtio';
 
-import { MFE_BORDER } from "../constants";
+import { MFE_BORDER } from '../constants';
+import store from '../store';
 
 const Cart = () => {
+  const { cart } = useSnapshot(store);
+
   return (
     <Box border={MFE_BORDER}>
-      {[].map((beverage) => (
+      {cart.map((beverage) => (
         <Box
-          borderBottom="1px"
-          borderBottomColor="gray.200"
+          borderBottom='1px'
+          borderBottomColor='gray.200'
           mb={3}
-          key={[beverage.producerName, beverage.beverageName].join("")}
+          key={[beverage.producerName, beverage.beverageName].join('')}
         >
           <Box>
-            <Text fontSize="2xl">
+            <Text fontSize='2xl'>
               <strong>{beverage.producerName}</strong>&nbsp;
               {beverage.beverageName}
             </Text>
@@ -25,7 +29,7 @@ const Cart = () => {
         </Box>
       ))}
       <Box>
-        <Button width="100%">Checkout</Button>
+        <Button width='100%'>Checkout</Button>
       </Box>
     </Box>
   );
