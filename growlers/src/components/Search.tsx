@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import {
   FormControl,
   FormLabel,
@@ -8,21 +8,29 @@ import {
   SliderFilledTrack,
   SliderThumb,
   Box,
-} from "@chakra-ui/react";
+} from '@chakra-ui/react';
+import { useSnapshot } from 'valtio';
+import store, { setSearchText, setAlcoholLimit } from '../store';
 
-import { MFE_BORDER } from "../constants";
+import { MFE_BORDER } from '../constants';
 
 const Search = () => {
+  const { searchText, alcoholLimit } = useSnapshot(store);
+
   return (
     <Box border={MFE_BORDER}>
-      <FormControl id="search">
+      <FormControl id='search'>
         <FormLabel>Search</FormLabel>
-        <Input type="text" />
+        <Input
+          type='text'
+          value={searchText}
+          onChange={(evt) => setSearchText(evt.target.value)}
+        />
       </FormControl>
 
-      <FormControl id="alcohol">
+      <FormControl id='alcohol'>
         <FormLabel>Alcohol</FormLabel>
-        <Slider colorScheme="pink" defaultValue={3} min={0} max={17}>
+        <Slider colorScheme='pink' defaultValue={3} min={0} max={17}>
           <SliderTrack>
             <SliderFilledTrack />
           </SliderTrack>
