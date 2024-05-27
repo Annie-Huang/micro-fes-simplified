@@ -30,7 +30,14 @@ const Search = () => {
 
       <FormControl id='alcohol'>
         <FormLabel>Alcohol</FormLabel>
-        <Slider colorScheme='pink' defaultValue={3} min={0} max={17}>
+        <Slider
+          colorScheme='pink'
+          defaultValue={alcoholLimit}
+          value={alcoholLimit}
+          onChange={(v) => setAlcoholLimit(v)}
+          min={0}
+          max={17}
+        >
           <SliderTrack>
             <SliderFilledTrack />
           </SliderTrack>
