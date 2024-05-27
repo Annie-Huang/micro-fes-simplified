@@ -36,4 +36,18 @@ export const load = (client: string): void => {
     });
 };
 
+export const setSearchText = (text: string) => {
+  store.searchText = text;
+  store.filteredTaps = filter();
+};
+
+export const setAlcoholLimit = (limit: number) => {
+  store.alcoholLimit = limit;
+  store.filteredTaps = filter();
+};
+
+export const addToCart = (beverage: Beverage) => {
+  store.cart.push(beverage);
+};
+
 export default store;
