@@ -1,19 +1,23 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
+import React from 'react';
+import ReactDOM from 'react-dom/client';
 
-import './index.css'
+import './index.css';
+
+import Taps from 'growlers/Taps';
+import { load } from 'growlers/store';
+load('hv-taplist');
+
+// react micro frontend app with module federation, share assets
+// https://www.linkedin.com/pulse/sharing-images-module-federation-rany-elhousieny-phd%E1%B4%AC%E1%B4%AE%E1%B4%B0/
 
 const App = () => (
-  <div className="container">
-    <div>Name: host-react</div>
-    <div>Framework: react</div>
-    <div>Language: TypeScript</div>
-    <div>CSS: Empty CSS</div>
+  <div>
+    <Taps />
   </div>
-)
-const rootElement = document.getElementById('app')
-if (!rootElement) throw new Error('Failed to find the root element')
+);
+const rootElement = document.getElementById('app');
+if (!rootElement) throw new Error('Failed to find the root element');
 
-const root = ReactDOM.createRoot(rootElement as HTMLElement)
+const root = ReactDOM.createRoot(rootElement as HTMLElement);
 
-root.render(<App />)
+root.render(<App />);
