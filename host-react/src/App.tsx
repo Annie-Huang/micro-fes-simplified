@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-
+import { ChakraProvider } from '@chakra-ui/react';
 import './index.css';
 
 import Taps from 'growlers/Taps';
@@ -11,9 +11,9 @@ load('hv-taplist');
 // https://www.linkedin.com/pulse/sharing-images-module-federation-rany-elhousieny-phd%E1%B4%AC%E1%B4%AE%E1%B4%B0/
 
 const App = () => (
-  <div>
+  <ChakraProvider>
     <Taps />
-  </div>
+  </ChakraProvider>
 );
 const rootElement = document.getElementById('app');
 if (!rootElement) throw new Error('Failed to find the root element');
