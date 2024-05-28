@@ -48,4 +48,4 @@ Next steps:
 
 PS C:\react\micro-fes-simplified> cd .\host-react\
 PS C:\react\micro-fes-simplified\host-react> npm install
-
+PS C:\react\micro-fes-simplified\host-react> npm i @chakra-ui/react @emotion/react @emotion/styled framer-motion
