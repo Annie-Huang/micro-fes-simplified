@@ -28,6 +28,7 @@ PS C:\react\micro-fes-simplified\growlers> npm install
 PS C:\react\micro-fes-simplified\growlers> npm i @chakra-ui/react @emotion/react @emotion/styled framer-motion
 PS C:\react\micro-fes-simplified\growlers> npm install valtio
 
+http://localhost:8080/remoteEntry.js
 --------------------------------------------------------------
 
 PS C:\react\micro-fes-simplified> npx create-mf-app
