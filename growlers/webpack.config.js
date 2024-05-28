@@ -2,6 +2,8 @@ const HtmlWebPackPlugin = require('html-webpack-plugin');
 const ModuleFederationPlugin = require('webpack/lib/container/ModuleFederationPlugin');
 const Dotenv = require('dotenv-webpack');
 const deps = require('./package.json').dependencies;
+// const path = require('path');
+
 module.exports = (_, argv) => ({
   output: {
     publicPath: 'http://localhost:8080/',
@@ -12,8 +14,16 @@ module.exports = (_, argv) => ({
   },
 
   devServer: {
+    // Copy from original code.
+    // contentBase: path.join(__dirname, 'public'),
     port: 8080,
     historyApiFallback: true,
+    headers: {
+      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, PATCH, OPTIONS',
+      'Access-Control-Allow-Headers':
+        'X-Requested-With, content-type, Authorization',
+    },
   },
 
   module: {
