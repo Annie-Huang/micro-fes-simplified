@@ -2,11 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { ChakraProvider } from '@chakra-ui/react';
 
-import Cart from '../components/Cart';
+import Taps from '../components/Taps';
 
 const App = () => (
   <ChakraProvider>
-    <Cart />
+    <Taps />
   </ChakraProvider>
 );
 
