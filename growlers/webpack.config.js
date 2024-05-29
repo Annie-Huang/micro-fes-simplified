@@ -59,6 +59,9 @@ module.exports = (_, argv) => ({
         './Search': './src/components/Search',
         './Taps': './src/components/Taps',
         './store': './src/store',
+        './VanillaCart': './src/vanilla/VanillaCart',
+        './VanillaSearch': './src/vanilla/VanillaSearch',
+        './VanillaTaps': './src/vanilla/VanillaTaps',
       },
       shared: {
         ...deps,
