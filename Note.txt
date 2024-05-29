@@ -57,7 +57,7 @@ PS C:\react\micro-fes-simplified> npx create-mf-app
 ? Pick the name of your app: host-vanilla
 ? Project Type: Application
 ? Port number: 8082
-? Framework: react
+? Framework: react      <-- should chose 'vanilla'
 ? Language: typescript
 ? CSS: CSS
 ? Packer: Webpack
@@ -72,3 +72,4 @@ Next steps:
 PS C:\react\micro-fes-simplified> cd .\host-vanilla\
 PS C:\react\micro-fes-simplified\host-vanilla> npm install
 
+PS C:\react\micro-fes-simplified\host-vanilla> npm uninstall react react-dom @babel/preset-react @types/react @types/react-dom
