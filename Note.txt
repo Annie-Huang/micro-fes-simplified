@@ -50,3 +50,25 @@ Next steps:
 PS C:\react\micro-fes-simplified> cd .\host-react\
 PS C:\react\micro-fes-simplified\host-react> npm install
 PS C:\react\micro-fes-simplified\host-react> npm i @chakra-ui/react @emotion/react @emotion/styled framer-motion
+
+--------------------------------------------------------------
+
+PS C:\react\micro-fes-simplified> npx create-mf-app
+? Pick the name of your app: host-vanilla
+? Project Type: Application
+? Port number: 8082
+? Framework: react
+? Language: typescript
+? CSS: CSS
+? Packer: Webpack
+Your 'host-vanilla' project is ready to go.
+
+Next steps:
+
+▶️ cd host-vanilla
+▶️ npm install
+▶️ npm start
+
+PS C:\react\micro-fes-simplified> cd .\host-vanilla\
+PS C:\react\micro-fes-simplified\host-vanilla> npm install
+
