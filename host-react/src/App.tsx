@@ -7,6 +7,8 @@ import Search from 'growlers/Search';
 import Cart from 'growlers/Cart';
 import Taps from 'growlers/Taps';
 import DataComponent from 'growlers/DataComponent';
+import { Beverage } from './types';
+
 import { load } from 'growlers/store';
 load('hv-taplist');
 
@@ -29,7 +31,7 @@ const App = () => (
         <Cart />
         {/* Show how you can use data to create your own component for special layout and styling */}
         <DataComponent>
-          {({ filteredTaps }) =>
+          {({ filteredTaps }: { filteredTaps: Beverage[] }) =>
             filteredTaps.slice(0, 5).map((beverage) => (
               <SimpleGrid columns={2} templateColumns='1fr 7fr' gap={1} mt={3}>
                 <div>
