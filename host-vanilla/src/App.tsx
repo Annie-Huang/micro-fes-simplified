@@ -20,13 +20,20 @@ root.render(<App />)*/
 
 import './index.css';
 
-import { load } from 'growlers/store';
+import { load, subscribe } from 'growlers/store';
 import VanillaTaps from 'growlers/VanillaTaps';
 import VanillaCart from 'growlers/VanillaCart';
 import VanillaSearch from 'growlers/VanillaSearch';
+
+load('hv-taplist');
 
 VanillaSearch('.search');
 VanillaTaps('.taps');
 VanillaCart('.cart');
 
-load('hv-taplist');
+subscribe((state) => {
+  document.querySelector('.beverage-list').innerHTML = state.filteredTaps
+    .map(({ beverageName }) => beverageName)
+    .join(', ');
+  console.log(state);
+});
