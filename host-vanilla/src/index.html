@@ -1,14 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>host-vanilla</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>host-vanilla</title>
-</head>
-
-<body>
+  <!--<body>
   <div id="app"></div>
-</body>
+</body>-->
 
+  <body style="margin: auto; max-width: 960px">
+    <div
+      style="
+        display: grid;
+        grid-template-columns: 2fr 3fr;
+        grid-column-gap: 1rem;
+      "
+    >
+      <div>Logo</div>
+      <div>
+        <div class="search"></div>
+      </div>
+    </div>
+    <div
+      style="
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        grid-column-gap: 1rem;
+      "
+    >
+      <div class="taps"></div>
+      <div class="cart"></div>
+    </div>
+  </body>
 </html>

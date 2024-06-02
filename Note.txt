@@ -73,3 +73,4 @@ PS C:\react\micro-fes-simplified> cd .\host-vanilla\
 PS C:\react\micro-fes-simplified\host-vanilla> npm install
 
 PS C:\react\micro-fes-simplified\host-vanilla> npm uninstall react react-dom @babel/preset-react @types/react @types/react-dom
+PS C:\react\micro-fes-simplified\host-vanilla> npm run start
