@@ -1,4 +1,4 @@
-import { proxy } from 'valtio';
+import { proxy, subscribe as valtioSubscribe, snapshot } from 'valtio';
 import { Beverage } from './types';
 
 export interface TapStore {
@@ -48,6 +48,13 @@ export const setAlcoholLimit = (limit: number) => {
 
 export const addToCart = (beverage: Beverage) => {
   store.cart.push(beverage);
+};
+
+export const subscribe = (
+  callback: (state: TapStore) => void
+): (() => void) => {
+  callback(snapshot(store));
+  return valtioSubscribe(store, () => callback(snapshot(store)));
 };
 
 export default store;
