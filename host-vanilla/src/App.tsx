@@ -20,9 +20,13 @@ root.render(<App />)*/
 
 import './index.css';
 
-import createTaps from 'growlers/VanillaTaps';
-import createCart from 'growlers/VanillaCart';
-import createSearch from 'growlers/VanillaSearch';
-import { load, subscribe } from 'growlers/store';
+import { load } from 'growlers/store';
+import VanillaTaps from 'growlers/VanillaTaps';
+import VanillaCart from 'growlers/VanillaCart';
+import VanillaSearch from 'growlers/VanillaSearch';
+
+VanillaSearch('.search');
+VanillaTaps('.taps');
+VanillaCart('.cart');
 
 load('hv-taplist');
