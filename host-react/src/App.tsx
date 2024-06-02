@@ -1,11 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { ChakraProvider } from '@chakra-ui/react';
+import { ChakraProvider, SimpleGrid, Text, Image } from '@chakra-ui/react';
 import './index.css';
 
 import Search from 'growlers/Search';
 import Cart from 'growlers/Cart';
 import Taps from 'growlers/Taps';
+import DataComponent from 'growlers/DataComponent';
 import { load } from 'growlers/store';
 load('hv-taplist');
 
@@ -26,6 +27,29 @@ const App = () => (
       <div>
         <Search />
         <Cart />
+        {/* Show how you can use data to create your own component for special layout and styling */}
+        <DataComponent>
+          {({ filteredTaps }) =>
+            filteredTaps.slice(0, 5).map((beverage) => (
+              <SimpleGrid columns={2} templateColumns='1fr 7fr' gap={1} mt={3}>
+                <div>
+                  <Image
+                    src={beverage.logo}
+                    alt={`${beverage.producerName} logo`}
+                  />
+                </div>
+                <div>
+                  <Text fontSize='xs' isTruncated>
+                    <strong>{beverage.producerName}</strong>
+                  </Text>
+                  <Text fontSize='xs' isTruncated>
+                    {beverage.beverageName}
+                  </Text>
+                </div>
+              </SimpleGrid>
+            ))
+          }
+        </DataComponent>
       </div>
       <Taps />
     </div>
